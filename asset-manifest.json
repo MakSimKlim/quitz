@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/quitz/static/css/main.dae1a1dc.css",
+    "main.js": "/quitz/static/js/main.99cf48ab.js",
+    "index.html": "/quitz/index.html",
+    "main.dae1a1dc.css.map": "/quitz/static/css/main.dae1a1dc.css.map",
+    "main.99cf48ab.js.map": "/quitz/static/js/main.99cf48ab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dae1a1dc.css",
+    "static/js/main.99cf48ab.js"
+  ]
+}
