@@ -1,6 +1,9 @@
+import ProgressBar from '../progress/ProgressBar';
+import './Quitzes.css';
 
-function Quitzes({question, onClickVariant})
+function Quitzes({question, onClickVariant, questions, step})
 {
+    const percent = Math.round((step)/(questions.length-1)*100);
     return(
         <div className="content">
             <h3>{question.title}</h3>
@@ -14,6 +17,7 @@ function Quitzes({question, onClickVariant})
                     )
                 }
             </ul>
+            <ProgressBar percent={percent}/>
         </div>
     )
 }

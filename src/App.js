@@ -2,6 +2,7 @@ import {useState} from 'react';
 import Quitzes from './components/quitzes/Quitzes';
 //import logo from './logo.svg';
 import './App.css';
+import ProgressBar from './components/progress/ProgressBar';
 
 const questions = 
 [
@@ -30,16 +31,27 @@ const questions =
 function App() {
   const[step,setStep] = useState(0);
   const question = questions[step];
+  const [correct, setCorrect] = useState(0);
 
   const onClickVariant = (variant) =>
     {
-      setStep(step+1);
+      if(step < questions.length-1)setStep(step+1);
+      if(variant === question.correct)
+      {
+        setCorrect(correct+1);
+      }
     } 
 
   return (
+    <>
     <div className="main">
-      <Quitzes question={question} onClickVariant={onClickVariant}/>
-    </div>
+      <Quitzes  question={question} 
+                onClickVariant={onClickVariant} 
+                questions={questions} 
+                step={step}                
+                />  
+     </div>
+     </>
   );
 }
 

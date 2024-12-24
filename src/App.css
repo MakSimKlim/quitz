@@ -37,3 +37,24 @@
     transform: rotate(360deg);
   }
 }
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background: aliceblue; 
+}
+.main
+{
+  width: 420px;
+  margin-top: 50px;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px 6px #01588a;
+  background: white; 
+}
