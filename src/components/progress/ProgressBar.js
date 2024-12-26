@@ -3,18 +3,16 @@ import './ProgressBar.css';
 function ProgressBar({percent})
 {
     const getColor = () =>
-    {
-        // let color ="";
-        // if(percent < 20) color ="#FF0000" 
-        // else if(percent < 70) color = "#ffa500"
-        // else color = "#2ecc71";
-        // return color;
-        
-        if(percent < 40) return "#FF0000" 
-        else if(percent < 70) return "#ffa500"   
-        else return "#2ecc71";
+    {       
+      if (percent === 25) return "#FF8C00"; // DarkOrange цвет для 25% 
+      else if (percent <= 50) return "#FFA07A"; // LightSalmon цвет для 50% 
+      else if (percent <= 75) return "#FFD700"; // Gold цвет для 75% 
+      else return "#2E8B57"; // SeaGreen цвет для 100%
         
     }
+    // Добавим вывод в консоль для отладки 
+    console.log(`Процент: ${percent}, Цвет: ${getColor()}`);
+
     return(
        <div className='progress-bar'>
          <div className='progress-bar-fill' style={{width:`${percent}%`, background: getColor()}}></div>
